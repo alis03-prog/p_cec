@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola soy resta</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'resta/style.css' %}">
+
+</head>
+
+<body class="bg-future">
+
+    <main class="card-future">
+        <h1 class="title-future">Addon de Resta</h1>
+
+        <form method="post" class="form-future">
+            {% csrf_token %}
+            
+            <input type="number" name="numero1" placeholder="Ingresa el primer número" class="input-future" required>
+            <input type="number" name="numero2" placeholder="Ingresa el segundo número" class="input-future" required>
+
+            <button type="submit" class="btn-future">Calcular</button>
+        </form>
+
+        {% if resultado is not None %}
+            <p class="result-future">{{ operacion }}</p>
+            <h2 class="result-future">Resultado: {{ resultado }}</h2>
+        {% endif %}
+
+        <a href="{% url 'resta_index' %}" class="btn-future">Volver al inicio</a>
+    </main>
+
+</body>
+</html>

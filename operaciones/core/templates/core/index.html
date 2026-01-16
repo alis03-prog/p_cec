@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <meta charset="UTF-8">
+    <title>CECy-MATH | Menú Principal</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+
+<body class="futuristic-body">
+
+    <!-- FONDOS -->
+    <div class="scanlines"></div>
+    <div class="neon-grid"></div>
+
+    <!-- PANEL DE MÚSICA (SEPARADO) -->
+    <aside class="music-panel">
+        <h3>Ambiente</h3>
+
+        <audio id="bg-music" loop>
+            <source src="{% static 'core/audio/tu_sancho.mp3' %}" type="audio/mpeg">
+        </audio>
+
+        <button onclick="toggleMusic()" class="music-btn">▶ / ⏸</button>
+        <p class="music-text">Música futurista</p>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <h1 class="title glitch">Menú CECy-MATH</h1>
+        <p class="subtitle">Sistema interactivo de matemáticas</p>
+
+        <!-- OPERACIONES -->
+        <section class="menu-section">
+            <h2>Operaciones Básicas</h2>
+            <div class="menu-grid">
+                <a class="neon-button" href="{% url 'suma_index' %}">➕ Suma</a>
+                <a class="neon-button" href="{% url 'resta_index' %}">➖ Resta</a>
+                <a class="neon-button" href="{% url 'multiplicacion_index' %}">✖ Multiplicación</a>
+                <a class="neon-button" href="{% url 'division_index' %}">➗ División</a>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Álgebra</h2>
+            <div class="menu-grid">
+                <a class="neon-button" href="{% url 'factorizacion_index' %}">Factorización</a>
+                <a class="neon-button" href="{% url 'jerarquia_index' %}">Jerarquía</a>
+                <a class="neon-button" href="{% url 'polinomios_index' %}">Polinomios</a>
+                <a class="neon-button" href="{% url 'ecuaciones1_index' %}">Ecuaciones 1°</a>
+                <a class="neon-button" href="{% url 'ecuaciones2_index' %}">Ecuaciones 2°</a>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Geometría</h2>
+            <div class="menu-grid">
+                <a class="neon-button" href="{% url 'rectas_index' %}">Rectas</a>
+                <a class="neon-button" href="{% url 'perimetros_index' %}">Perímetros</a>
+                <a class="neon-button" href="{% url 'areas_index' %}">Áreas</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- SCRIPT -->
+    <script>
+        const music = document.getElementById("bg-music");
+        let playing = false;
+
+        function toggleMusic() {
+            if (playing) {
+                music.pause();
+            } else {
+                music.play();
+            }
+            playing = !playing;
+        }
+    </script>
+
+</body>
+</html>

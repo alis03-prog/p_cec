@@ -1,0 +1,116 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* FONDO FUTURISTA MAGENTA LÁSER */
+.bg-future {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #5a0033, #120008 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffe6f5;
+}
+
+/* TARJETA PRINCIPAL */
+.card-future {
+    width: 90%;
+    max-width: 420px;
+    background: rgba(45, 0, 28, 0.92);
+    border-radius: 22px;
+    padding: 40px 35px;
+    border: 2px solid #ff00c8;
+    box-shadow:
+        0 0 35px rgba(255, 0, 200, 0.85),
+        inset 0 0 20px rgba(255, 0, 200, 0.35);
+    text-align: center;
+}
+
+/* TÍTULO */
+.title-future {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #fff0fa;
+    text-shadow:
+        0 0 10px #ff00c8,
+        0 0 30px #ff00c8;
+}
+
+/* FORMULARIO */
+.form-future {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* INPUT */
+.input-future {
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 2px solid #ff00c8;
+    background: rgba(20, 0, 12, 0.9);
+    color: #ffe6f5;
+    font-size: 1rem;
+    outline: none;
+    box-shadow:
+        inset 0 0 12px rgba(255, 0, 200, 0.35),
+        0 0 12px rgba(255, 0, 200, 0.5);
+    transition: all 0.3s ease;
+}
+
+.input-future::placeholder {
+    color: #ffb3e3;
+}
+
+.input-future:focus {
+    box-shadow:
+        0 0 25px rgba(255, 0, 200, 1),
+        inset 0 0 18px rgba(255, 0, 200, 0.8);
+    transform: scale(1.03);
+}
+
+/* BOTÓN */
+.btn-future {
+    padding: 14px;
+    border-radius: 16px;
+    border: 2px solid #ff00c8;
+    background: transparent;
+    color: #fff0fa;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow:
+        0 0 18px rgba(255, 0, 200, 0.7),
+        inset 0 0 12px rgba(255, 0, 200, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-future:hover {
+    background: rgba(255, 0, 200, 0.25);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow:
+        0 0 35px rgba(255, 0, 200, 1),
+        inset 0 0 20px rgba(255, 0, 200, 0.9);
+}
+
+/* RESULTADO */
+.result-future {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    color: #ff99e6;
+    text-shadow: 0 0 12px rgba(255, 0, 200, 0.8);
+}
+
+/* LINK FINAL */
+a.btn-future {
+    display: inline-block;
+    margin-top: 25px;
+}

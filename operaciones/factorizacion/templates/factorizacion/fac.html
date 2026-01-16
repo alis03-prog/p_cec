@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola soy factorizacion</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'factorizacion/style.css' %}">
+</head>
+
+<body class="bg-future">
+
+    <main class="card-future">
+        <h1 class="title-future">Addon de Factorización</h1>
+
+        <form method="post" class="form-future">
+            {% csrf_token %}
+
+            <input type="number" name="numero" placeholder="Ingresa un número" class="input-future" required>
+
+            <button type="submit" class="btn-future">Factorizar</button>
+        </form>
+
+        {% if resultado %}
+            <h2 class="result-future">Resultado: {{ resultado }}</h2>
+        {% endif %}
+
+        <a href="{% url 'factorizacion_index' %}" class="btn-future">Volver al inicio</a>
+    </main>
+
+</body>
+</html>

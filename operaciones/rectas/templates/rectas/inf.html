@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información sobre la Recta Numérica</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'rectas/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>La Recta Numérica</h1>
+        <p class="subtitulo">Concepto, pasos para usarla y ejemplos fáciles</p>
+    </header>
+
+    <section class="card">
+        <h2>¿Qué es una recta numérica?</h2>
+        <p>
+            La recta numérica es una línea horizontal donde los números se ordenan 
+            de menor a mayor. Cada número se coloca en una posición específica, 
+            manteniendo una separación igual entre ellos.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>¿Para qué sirve?</h2>
+        <ul>
+            <li>Para aprender a sumar y restar de forma visual.</li>
+            <li>Para comparar números (mayor, menor o igual).</li>
+            <li>Para ubicar números enteros, negativos y decimales.</li>
+            <li>Para representar distancias y desplazamientos.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Pasos para usar la recta numérica</h2>
+        <ol>
+            <li>Identifica los números que vas a usar.</li>
+            <li>Ubica el primer número en la recta.</li>
+            <li>Cuenta hacia la derecha si vas a sumar.</li>
+            <li>Cuenta hacia la izquierda si vas a restar.</li>
+            <li>Marca el punto donde termines; ese es el resultado.</li>
+        </ol>
+    </section>
+
+    <section class="card">
+        <h2>Ejemplos</h2>
+
+        <h3>📌 Ejemplo 1: Suma</h3>
+        <p><strong>Operación:</strong> 4 + 3</p>
+        <p>Colocamos el 4 en la recta y avanzamos 3 pasos hacia la derecha.</p>
+        <p><strong>Resultado:</strong> 7</p>
+
+        <div class="recta-ejemplo">
+            <span>2</span>
+            <span>3</span>
+            <span class="marcado">4</span>
+            <span>5</span>
+            <span>6</span>
+            <span class="resultado">7</span>
+            <span>8</span>
+        </div>
+
+        <h3>📌 Ejemplo 2: Resta</h3>
+        <p><strong>Operación:</strong> 9 - 5</p>
+        <p>Ubicamos el 9 y nos movemos 5 pasos hacia la izquierda.</p>
+        <p><strong>Resultado:</strong> 4</p>
+
+        <div class="recta-ejemplo">
+            <span>3</span>
+            <span class="resultado">4</span>
+            <span>5</span>
+            <span>6</span>
+            <span class="marcado">9</span>
+            <span>10</span>
+        </div>
+
+    </section>
+<a href="{% url 'rectas_index' %}" class="btn-future">Volver al inicio</a>
+  <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+     <a href="https://www.youtube.com/watch?v=TvLbbFKIfEw"><img src="https://static.eduboom.es/eduboom_es/uploads/vidimgs/15092023-Sumar-contando-en-la-recta-numerica.jpg" width="100"></a>
+    <a href="https://www.youtube.com/watch?v=4ejblC5i7Fg"><img src="https://i0.wp.com/www.actividadesdeinfantilyprimaria.com/wp-content/uploads/2022/02/situar-recta-numerica-3.jpg?resize=720%2C1040&ssl=1" width="100"></a>
+    <a href="https://www.youtube.com/watch?v=6MwdfLuIyNI"><img src="https://i.ytimg.com/vi/CVcFQVKSOho/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAdQGzrr9j31_k3Gj0SS-sLNXrTjQ" width="100"></a>
+    <a href="https://www.smartick.es/blog/matematicas/algebra/ubicar-numeros-la-recta-numerica/"><img src="https://m.media-amazon.com/images/I/71PkttQFPQL.jpg" width="100"></a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información sobre la Suma</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'suma/styles.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="futuristic-title">Información sobre la Suma</h1>
+
+        <h2>¿Qué es la suma?</h2>
+        <p>
+            La <strong>suma</strong> es una operación matemática que consiste en juntar dos o más cantidades para obtener un total.
+        </p>
+
+        <div class="example">
+            <strong>Ejemplo:</strong><br>
+            3 + 2 = 5
+        </div>
+
+        <h2>Instrucciones para sumar</h2>
+        <ol>
+            <li>Escribe los números que quieres sumar.</li>
+            <li>Alinea las unidades si son números grandes.</li>
+            <li>Suma primero las unidades.</li>
+            <li>Si el resultado es mayor a 9, realiza la llevada.</li>
+            <li>Suma las decenas (incluyendo la llevada).</li>
+            <li>Continúa con centenas, miles, etc.</li>
+            <li>El número final es el resultado.</li>
+        </ol>
+
+        <h2>Ejemplos</h2>
+
+        <h3>Suma simple</h3>
+        <div class="example">4 + 5 = <strong>9</strong></div>
+
+        <h3>Suma con llevadas</h3>
+        <div class="example">
+            27<br>
+            + 48<br>
+            -----<br>
+            <strong>75</strong>
+        </div>
+
+        <h2>Dato curioso</h2>
+        <p>
+            La suma es una de las cuatro operaciones básicas de la aritmética. Representa la acción natural de <strong>unir elementos</strong>.
+        </p>
+    </div>
+      
+  <div class="img-row">
+   <a href="https://www.youtube.com/watch?v=oF-rZLIShC8"><img src="https://i.ytimg.com/vi/t98G7TaHHqg/sddefault.jpg" width="100"></a>
+    <a href="https://www.youtube.com/watch?v=WuT-Ka03i2k"><img src="https://s1.significados.com/foto/suma-og.jpg?class=ogImageWide" width="100"></a>
+    <a href="https://es.khanacademy.org/math/early-math/cc-early-math-add-sub-basics"><img src="https://www.matemente.com/wp-content/uploads/2022/06/propiedad-asociativa-de-la-suma-1-1024x683.jpg" width="100"></a>
+    <a href="https://arbolabc.com/juegos-de-sumas"><img src="https://www.shutterstock.com/image-vector/cute-smiling-plus-sign-happy-260nw-2623956013.jpg" width="100"></a>
+  </div>
+<a href="{% url 'suma_index' %}">Pagina_inicial</a>
+</body>
+</html>
+

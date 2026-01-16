@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Información sobre la Factorización</title>
+
+  <!-- CSS externo futurista -->
+  <link rel="stylesheet" href="{% static 'factorizacion/styles.css' %}">
+</head>
+
+<body class="bg-future">
+
+  <main class="card-future">
+    <header>
+      <h1 class="title-future">Operación: Factorización</h1>
+      <p class="subtitle">Aprende qué es, cómo se hace y para qué sirve la descomposición en factores primos.</p>
+    </header>
+
+    <!-- ¿Qué es la factorización? -->
+    <section class="section">
+      <h2 class="section-title">¿Qué es la factorización?</h2>
+      <p>
+        La <strong>factorización</strong> es el proceso de descomponer un número en los <strong>factores primos</strong> que,
+        multiplicados entre sí, dan como resultado el número original.  
+        Un <em>factor primo</em> es un número que solo se puede dividir entre 1 y él mismo.
+      </p>
+      <p>
+        Por ejemplo, en la factorización:  
+        <strong>36 = 2 × 2 × 3 × 3</strong>  
+        los números 2 y 3 son primos.
+      </p>
+    </section>
+
+    <!-- Pasos para factorizar -->
+    <section class="section">
+      <h2 class="section-title">Pasos para factorizar un número</h2>
+      <ol class="steps">
+        <li>Escribe el número que quieres descomponer.</li>
+        <li>Divídelo entre el número primo más pequeño (comenzando por 2).</li>
+        <li>Si es divisible, escribe el factor y divide el número.</li>
+        <li>Repite el proceso con el resultado obtenido.</li>
+        <li>Cambia al siguiente primo cuando ya no sea divisible.</li>
+        <li>Detente cuando el resultado final sea 1.</li>
+      </ol>
+    </section>
+
+    <!-- Ejemplos -->
+    <section class="section">
+      <h2 class="section-title">Ejemplos</h2>
+
+      <div class="example">
+        <strong>Ejemplo 1 — Factorización de 24</strong>
+        <div class="box">
+          24 ÷ 2 = 12<br>
+          12 ÷ 2 = 6<br>
+          6 ÷ 2 = 3<br>
+          3 ÷ 3 = 1<br><br>
+          <strong>24 = 2 × 2 × 2 × 3</strong>
+        </div>
+      </div>
+
+      <div class="example">
+        <strong>Ejemplo 2 — Factorización de 90</strong>
+        <div class="box">
+          90 ÷ 2 = 45<br>
+          45 ÷ 3 = 15<br>
+          15 ÷ 3 = 5<br>
+          5 ÷ 5 = 1<br><br>
+          <strong>90 = 2 × 3 × 3 × 5</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consejos -->
+    <section class="section">
+      <h2 class="section-title">Consejos Útiles</h2>
+      <ul>
+        <li>Siempre comienza por el número primo más pequeño: <strong>2</strong>.</li>
+        <li>Si el número es impar, prueba con <strong>3</strong>, luego 5, 7, etc.</li>
+        <li>Cuando el resultado llegue a 1, ya terminaste la factorización.</li>
+        <li>Los números primos no se pueden descomponer más.</li>
+      </ul>
+    </section>
+
+    <!-- Ejercicios -->
+    <section class="section">
+      <h2 class="section-title">Ejercicios</h2>
+      <ol>
+        <li>Factoriza 48</li>
+        <li>Factoriza 72</li>
+        <li>Factoriza 150</li>
+      </ol>
+    </section>
+
+    <footer class="footer">
+      <a class="btn-future" href="{% url 'factorizacion_index' %}">Volver al menú principal</a>
+    </footer>
+  </main>
+
+ 
+  <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+    <a href="https://www.youtube.com/watch?v=BygK11QxQnA"><img src="https://cdn.todamateria.com/imagenes/factorizacion-og.jpg" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=TKo7NtIilWM"><img src="https://polinomiosweb.com/wp-content/uploads/2024/11/Factorizacion-de-polinomios.jpg" width="70"></a>
+    <a href="https://alianza.bunam.unam.mx/enp/factorizacion/"><img src="https://www.lifeder.com/wp-content/uploads/2020/08/factorizacion-1.jpg" width="70"></a>
+    <a href="https://www.youtube.com/playlist?list=PLeySRPnY35dGY6GX7xO_lruvCIS6NkfR-"><img src="https://i.ytimg.com/vi/a8CUEopWCN0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6XCHCeAhy4Q2C93TvR2EqU8S7Ow" width="70"></a>
+</body>
+</html>

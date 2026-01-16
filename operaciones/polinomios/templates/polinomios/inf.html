@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información sobre Polinomios</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polinomios/style.css' %}">
+</head>
+
+<body class="futuristic-bg">
+
+    <div class="scanlines"></div>
+    <div class="neon-grid"></div>
+
+    <div class="container panel">
+
+        <h1 class="title glow">INFORMACIÓN SOBRE POLINOMIOS</h1>
+
+        <p class="descripcion">
+            Un <strong>polinomio</strong> es una expresión algebraica formada por la suma o resta de términos 
+            que contienen una variable elevada a un exponente entero no negativo.<br><br>
+            Ejemplos:<br>
+            <strong>3x² - 2x + 5</strong><br>
+            <strong>x³ + x</strong><br>
+            <strong>-7x + 4</strong>
+        </p>
+
+        <hr style="border-color: rgba(255,0,0,0.4); margin: 25px 0;">
+
+        <h2 class="res-title">🔹 Partes de un Polinomio</h2>
+
+        <p class="descripcion">
+            ● <strong>Término:</strong> Cada parte separada por + o -.  
+            <br>Ej: en <strong>4x² - 3x + 1</strong> los términos son: 4x², -3x y 1.
+            <br><br>
+            ● <strong>Coeficiente:</strong> El número que acompaña a la variable.  
+            <br>En <strong>4x²</strong>, el coeficiente es 4.
+            <br><br>
+            ● <strong>Variable:</strong> Normalmente es la letra x.
+            <br><br>
+            ● <strong>Exponente:</strong> El número al que se eleva la variable.  
+            <br>En <strong>4x²</strong>, el exponente es 2.
+        </p>
+
+        <hr style="border-color: rgba(255,0,0,0.4); margin: 25px 0;">
+
+        <h2 class="res-title">🔹 Operaciones con Polinomios</h2>
+
+        <p class="descripcion">
+            ✔ <strong>Suma:</strong> Se suman los coeficientes de términos con el mismo exponente.<br>
+            ✔ <strong>Resta:</strong> Igual que la suma, pero restando coeficientes.<br>
+            ✔ <strong>Multiplicación:</strong> Se multiplican coeficientes y se suman exponentes.<br><br>
+
+            Ejemplo:<br>
+            (2x + 3)(x - 1)<br><br>
+            → 2x·x = 2x²<br>
+            → 2x·(-1) = -2x<br>
+            → 3·x = 3x<br>
+            → 3·(-1) = -3<br><br>
+            Resultado final:<br>
+            <strong>2x² + x - 3</strong>
+        </p>
+
+        <a href="{% url 'polinomios' %}" class="btn neon-btn">Ir a Calculadora</a>
+        <a href="{% url 'polinomios_index' %}" class="btn volver">Volver al Core</a>
+  <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+     <a href="https://www.youtube.com/watch?v=tnf_wQ7-_Pw"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8ZPWqVCCsN4pmEpDizO9PCjkAji8_lORV_STkWmuIN1nWLCcykcEh5RKX1aCcDZaqFYmPjZwk62509vw0cYsF1ZuObL_gohCoCWsITy4Dp538SwszCZzXKMaUlw1rZZe2DeiOjUY5gno/s1600/polinomios.jpg" width="100"></a>
+    <a href="https://www.youtube.com/watch?v=bU9m3PF71Oo"><img src="https://math3logic.com/wp-content/uploads/2025/02/Ejemplo-suma-y-resta-de-polinomios-2-min.png" width="100"></a>
+    <a href="https://www.youtube.com/watch?v=50bJU4PLSEs&list=PLiD8kbrLakB4sdbPy2J4xN8ZRdgeZLX0K"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdyD-TdbWwHIzuBTiDC5RMInpkCOBDDP9NRQ&s" width="100"></a>
+    <a href="https://es.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:poly-arithmetic"><img src="https://s1.significados.com/foto/polinomio-og.jpg?class=ogImageWide" width="100"></a>
+  </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página Principal de Perímetros</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'perimetros/sty.css' %}">
+</head>
+
+<body class="futuristic-bg">
+
+<div class="main-card">
+
+    <h1>PÁGINA PRINCIPAL DE PERÍMETROS DE FIGURAS PLANAS</h1>
+
+    <p>
+        Esta página está hecha con fines educativos para los estudiantes de secundaria.<br>
+        Aquí aprenderás cómo calcular los perímetros de las figuras planas paso a paso.<br>
+        Opciones disponibles:
+    </p>
+
+    <ol>
+        <li>Información sobre los perímetros de figuras planas</li>
+        <li>Calcular perímetros de figuras planas</li>
+    </ol>
+
+    <div class="btn-container">
+        <a href="{% url 'index' %}">Volver al Menú</a>
+        <a href="{% url 'perimetros_info' %}">Información sobre los Perímetros</a>
+        <a href="{% url 'perimetros' %}">Calcular Perímetros</a>
+    </div>
+
+</div>
+
+</body>
+</html>

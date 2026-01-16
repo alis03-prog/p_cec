@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecuaciones de Primer Grado</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ecuaciones1/style.css' %}">
+</head>
+
+<body class="futuristic-bg">
+
+    <div class="scanlines"></div>
+    <div class="neon-grid"></div>
+
+    <div class="container panel">
+
+        <h1 class="title glow">Resolver Ecuaciones de Primer Grado</h1>
+
+        <p class="descripcion">
+            Ingresa una ecuación de la forma <strong>ax + b = c</strong><br>
+            Ejemplos: <em>2x+3=9</em>, <em>-4x-8=12</em>, <em>x+5=10</em>
+        </p>
+
+        <form method="post" class="formulario">
+            {% csrf_token %}
+            <input 
+                type="text" 
+                name="expresion" 
+                placeholder="Ejemplo: 2x+3=9"
+                value="{{ expresion }}"
+                required
+            >
+
+            <button type="submit" class="btn neon-btn">Resolver</button>
+        </form>
+
+        {% if resultado is not None %}
+            <div class="resultado-box">
+                <h2>Resultado:</h2>
+                <p class="resultado-texto">{{ resultado }}</p>
+            </div>
+        {% endif %}
+
+        <a href="{% url 'ecuaciones1_index' %}" class="btn neon-btn regresar">
+            Volver al inicio
+        </a>
+
+    </div>
+
+</body>
+</html>

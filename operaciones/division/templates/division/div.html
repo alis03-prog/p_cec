@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola soy division</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'division/style.css' %}">
+</head>
+
+<body class="bg-future">
+
+    <main class="card-future">
+        <h1 class="title-future">Addon de división</h1>
+
+        <form method="post" class="form-future">
+            {% csrf_token %}
+            
+            <input type="number" name="numero1" placeholder="Ingresa el primer número" 
+                   class="input-future" step="0.01" required>
+
+            <input type="number" name="numero2" placeholder="Ingresa el segundo número" 
+                   class="input-future" step="0.01" required>
+
+            <button type="submit" class="btn-future">Calcular</button>
+        </form>
+
+        <!-- Mostrar error si existe -->
+        {% if error %}
+            <h2 class="result-future" style="color: red;">{{ error }}</h2>
+        {% endif %}
+
+        <!-- Mostrar resultado incluso si es 0 -->
+        {% if resultado is not None %}
+            <h2 class="result-future">Resultado: {{ resultado }}</h2>
+        {% endif %}
+
+        <a href="{% url 'division_index' %}" class="btn-future">Volver al inicio</a>
+    </main>
+
+</body>
+</html>
+ 

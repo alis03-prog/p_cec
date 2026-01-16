@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Perímetros</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'perimetros/style.css' %}">
+</head>
+
+<body>
+
+<div class="contenedor panel-futurista">
+    <h2 class="titulo-futurista">Calculadora de Perímetros</h2>
+
+    <form method="POST" class="form-futurista">
+        {% csrf_token %}
+
+        <label class="label-futurista">Selecciona la figura:</label>
+        <select id="figura" name="figura" class="input-futurista" onchange="mostrarCampos()" required>
+            <option value="">-- Selecciona --</option>
+
+            <option value="cuadrado" {% if figura == "cuadrado" %}selected{% endif %}>Cuadrado</option>
+            <option value="rectangulo" {% if figura == "rectangulo" %}selected{% endif %}>Rectángulo</option>
+            <option value="triangulo" {% if figura == "triangulo" %}selected{% endif %}>Triángulo</option>
+            <option value="circulo" {% if figura == "circulo" %}selected{% endif %}>Círculo</option>
+        </select>
+
+        <!-- CUADRADO -->
+        <div id="grupo-cuadrado" class="grupo grupo-futurista">
+            <label class="label-futurista">Lado (cm):</label>
+            <input type="number" step="0.01" name="lado" class="input-futurista">
+        </div>
+
+        <!-- RECTANGULO -->
+        <div id="grupo-rectangulo" class="grupo grupo-futurista">
+            <label class="label-futurista">Base (cm):</label>
+            <input type="number" step="0.01" name="base" class="input-futurista">
+
+            <label class="label-futurista">Altura (cm):</label>
+            <input type="number" step="0.01" name="altura" class="input-futurista">
+        </div>
+
+        <!-- TRIANGULO -->
+        <div id="grupo-triangulo" class="grupo grupo-futurista">
+            <label class="label-futurista">Lado 1 (cm):</label>
+            <input type="number" step="0.01" name="lado1" class="input-futurista">
+
+            <label class="label-futurista">Lado 2 (cm):</label>
+            <input type="number" step="0.01" name="lado2" class="input-futurista">
+
+            <label class="label-futurista">Lado 3 (cm):</label>
+            <input type="number" step="0.01" name="lado3" class="input-futurista">
+        </div>
+
+        <!-- CIRCULO -->
+        <div id="grupo-circulo" class="grupo grupo-futurista">
+            <label class="label-futurista">Radio (cm):</label>
+            <input type="number" step="0.01" name="radio" class="input-futurista">
+        </div>
+
+        <button type="submit" class="btn-futurista">Calcular</button>
+    </form>
+
+    {% if resultado %}
+    <div class="resultado resultado-futurista">
+        <strong>Resultado:</strong><br>
+        El perímetro del <strong>{{ figura }}</strong> es:
+        <strong>{{ resultado }} cm</strong>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+    function mostrarCampos() {
+        const figura = document.getElementById("figura").value;
+
+        document.querySelectorAll(".grupo").forEach(div => {
+            div.style.display = "none";
+        });
+
+        if (figura) {
+            const grupo = document.getElementById("grupo-" + figura);
+            if (grupo) grupo.style.display = "block";
+        }
+    }
+
+    mostrarCampos();
+</script>
+
+<a class="volver-link" href="{% url 'perimetros_index' %}">Volver al inicio</a>
+
+</body>
+</html>

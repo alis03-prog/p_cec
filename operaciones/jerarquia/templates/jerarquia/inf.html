@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información — Jerarquía de Operaciones</title>
+
+    <!-- CSS externo futurista -->
+    <link rel="stylesheet" href="{% static 'jerarquia/styles.css' %}">
+</head>
+
+<body class="bg-future">
+    <div class="container">
+        <h1 class="title">Información sobre la Jerarquía de Operaciones</h1>
+
+        <p>
+            La <strong>jerarquía de operaciones</strong> establece el orden correcto para resolver expresiones
+            matemáticas y asegurar que todos obtengamos el mismo resultado.
+        </p>
+
+        <h2>Orden correcto</h2>
+        <ul>
+            <li><strong>1. Paréntesis</strong>: se resuelven primero.</li>
+            <li><strong>2. Potencias y raíces</strong>.</li>
+            <li><strong>3. Multiplicación y división</strong> (de izquierda a derecha).</li>
+            <li><strong>4. Suma y resta</strong> (de izquierda a derecha).</li>
+        </ul>
+
+        <h2>Ejemplo</h2>
+        <p><strong>Operación:</strong> 8 + 2 × 5</p>
+        <p>
+            Primero multiplicación: 2 × 5 = 10<br>
+            Luego suma: 8 + 10 = <strong>18</strong>
+        </p>
+
+        <h2>Importancia</h2>
+        <p>
+            Sin este orden, diferentes personas podrían resolver la misma operación con distintos resultados.
+        </p>
+  <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+   <a href="https://www.youtube.com/watch?v=XV5PiV2-91U"><img src="https://s1.significados.com/foto/jerarquia-de-operaciones-og.jpg?class=ogImageWide" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=Gadj37klXbw"><img src="https://math3logic.com/wp-content/uploads/2023/03/Jerarquia-de-operaciones-6-min.png" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=dibwDpi4YcM&list=PLeySRPnY35dF7mtXhaWAn0r_MDZdaD_49"><img src="https://i.ytimg.com/vi/XV5PiV2-91U/maxresdefault.jpg" width="70"></a>
+    <a href="https://www.smartick.es/blog/matematicas/jerarquia-de-operaciones/"><img src="https://i0.wp.com/www.actividadesdeinfantilyprimaria.com/wp-content/uploads/2025/03/Infografia-jerarquia-de-las-ilustraciones-.jpg?resize=800%2C2000&ssl=1" width="70"></a>
+  </div>
+        <a href="{% url 'jerarquia_index' %}" class="btn">Volver</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recta numérica</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'rectas/style.css' %}">
+</head>
+<body>
+
+<h1>Recta</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="number" name="numero1" placeholder="Número 1" required>
+    <input type="number" name="numero2" placeholder="Número 2" required>
+    <button type="submit">Calcular</button>
+</form>
+
+{% if resultado is not None %}
+    <h2>Resultado: {{ resultado }}</h2>
+
+    <h3>Recta numérica:</h3>
+
+    <div class="recta-container">
+        {% for n in recta %}
+            <div class="numero
+                {% if n == num1 %} marcado {% endif %}
+                {% if n == num2 %} marcado {% endif %}
+                {% if n == resultado %} resultado {% endif %}
+            ">
+                {{ n }}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endif %}
+<a href="{% url 'rectas_index' %}" class="btn-future">Volver al inicio</a>
+
+</body>
+</html>

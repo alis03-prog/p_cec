@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Polinomios</title>
+
+    <link rel="stylesheet" href="{% static 'polinomios/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="futuristic-bg">
+    <div class="scanlines"></div>
+    <div class="neon-grid"></div>
+
+    <div class="container panel">
+
+        <h2 class="title glow">Calculadora de Polinomios</h2>
+
+        <p class="descripcion">
+            Ingresa dos polinomios y selecciona la operación que deseas realizar.
+        </p>
+
+        <form method="post" class="formulario">
+            {% csrf_token %}
+
+            <label class="label">Polinomio 1</label>
+            <input class="input" type="text" name="polinomio1"
+                   placeholder="Ej: 2a+4b^2-5ab-4a" required>
+
+            <label class="label">Polinomio 2</label>
+            <input class="input" type="text" name="polinomio2"
+                   placeholder="Ej: a-b" required>
+
+            <label class="label">Operación</label>
+            <select class="select" name="operacion">
+                <option value="suma">Suma</option>
+                <option value="resta">Resta</option>
+                <option value="multiplicacion">Multiplicación</option>
+                <option value="division">División</option>
+            </select>
+
+            <button type="submit" class="btn">Calcular</button>
+        </form>
+
+        {% if resultado %}
+        <div class="resultado">
+            <div class="res-title">Resultado</div>
+            <div class="res">{{ resultado }}</div>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="resultado">
+            <div class="res-title">Error</div>
+            <div class="res">{{ error }}</div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+<a href="{% url 'polinomios_index' %}">Volver al Core</a>
+</body>
+</html>
+ 

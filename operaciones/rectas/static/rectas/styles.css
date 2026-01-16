@@ -1,0 +1,200 @@
+/* ------------------------------
+   FONDO FUTURISTA
+------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #0a0014;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Fondo de cuadrícula neon */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: linear-gradient(90deg, rgba(255,0,120,0.15) 1px, transparent 1px),
+                      linear-gradient(0deg, rgba(255,0,120,0.15) 1px, transparent 1px);
+    z-index: -2;
+}
+
+/* Efecto scanline */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 0, 120, 0.05) 0px,
+        rgba(255, 0, 120, 0.05) 2px,
+        rgba(0, 0, 0, 0.06) 3px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ------------------------------
+   ENCABEZADO
+------------------------------ */
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 48px;
+    text-shadow: 0 0 15px #ff1fa4, 0 0 30px #ff008c;
+    animation: glowPulse 2s infinite alternate;
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: #ffb1da;
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #ff39be; }
+    100% { text-shadow: 0 0 30px #ff008c; }
+}
+
+/* ------------------------------
+   TARJETAS (CARDS)
+------------------------------ */
+
+.card {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgba(255, 0, 120, 0.1);
+    border-radius: 18px;
+    border: 2px solid rgba(255, 0, 180, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(255, 0, 150, 0.3);
+    animation: borderGlow 4s infinite alternate;
+}
+
+@keyframes borderGlow {
+    0% { box-shadow: 0 0 10px #ff2fa6; }
+    100% { box-shadow: 0 0 25px #ff008c; }
+}
+
+h2 {
+    color: #ff87cc;
+}
+
+ul, ol {
+    font-size: 18px;
+}
+
+/* ------------------------------
+   RECTA CON EJEMPLOS
+------------------------------ */
+
+.recta-ejemplo {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 20px;
+}
+
+.recta-ejemplo span {
+    padding: 10px 14px;
+    border-bottom: 3px solid #ff61c0;
+    background: rgba(255, 0, 120, 0.13);
+    border-radius: 7px;
+}
+
+/* número resaltado */
+.marcado {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+/* resultado rosa neón */
+.resultado {
+    background: #ff2fa6;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 20px #ff2fa6;
+}
+
+/* ------------------------------
+   BOTÓN FUTURISTA ROSA
+------------------------------ */
+
+.btn-future {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #ff2fa6;
+    background: rgba(255, 0, 120, 0.15);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* brillo animado del botón */
+.btn-future::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: inherit;
+    background: linear-gradient(
+        45deg,
+        #ff008c,
+        #ff2fa6,
+        #ff69b4,
+        #ff2fa6,
+        #ff008c
+    );
+    background-size: 400%;
+    animation: neonMove 6s linear infinite;
+    filter: blur(10px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* animación del borde neon */
+@keyframes neonMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-future:hover {
+    background: #ff2fa6;
+    box-shadow: 0 0 20px #ff2fa6;
+    transform: scale(1.05);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+
+@media (max-width: 600px) {
+    h1 { font-size: 36px; }
+    .card { margin: 20px 10px; }
+    .recta-ejemplo { flex-wrap: wrap; }
+}

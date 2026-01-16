@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página Principal de Suma</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'polinomios/sty.css' %}">
+</head>
+<body class="futuristic-bg">
+
+<div class="scanlines"></div> <!-- efecto scan -->
+<div class="neon-grid"></div> <!-- líneas del fondo -->
+
+<div class="container panel">
+    <h1 class="title glow">PÁGINA PRINCIPAL DE operaciones con polinomios</h1>
+
+    <p class="descripcion">
+        Esta página está hecha con fines educativos para los estudiantes de secundaria.<br>
+        Aquí aprenderás cómo calcular operaciones con polinomios paso a paso.<br>
+        Opciones disponibles:
+    </p>
+
+    <ol class="lista">
+        <li>Información sobre las operaciones con polinomios</li>
+        <li>Calcular Operacion con polinomio</li>
+    </ol>
+
+    <div class="botones">
+        <a class="btn neon-btn" href="{% url 'index' %}">Volver al Menú</a>
+        <a class="btn neon-btn" href="{% url 'polinomios_info' %}">Información sobre las Operaciones con polinomios</a>
+        <a class="btn neon-btn" href="{% url 'polinomios' %}">Calcular Polimonios</a>
+    </div>
+</div>
+
+</body>
+</html>

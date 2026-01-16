@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página Principal de Recta</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'rectas/sty.css' %}">
+</head>
+<body class="futuristic-bg">
+
+<div class="scanlines"></div> <!-- efecto scan -->
+<div class="neon-grid"></div> <!-- líneas del fondo -->
+
+<div class="container panel">
+    <h1 class="title glow">PÁGINA PRINCIPAL DE RECTA</h1>
+
+    <p class="descripcion">
+        Esta página está hecha con fines educativos para los estudiantes de secundaria.<br>
+        Aquí aprenderás cómo calcular una recta paso a paso.<br>
+        Opciones disponibles:
+    </p>
+
+    <ol class="lista">
+        <li>Información sobre las rectas</li>
+        <li>Calcular rectas</li>
+    </ol>
+
+    <div class="botones">
+        <a class="btn neon-btn" href="{% url 'index' %}">Volver al Menú</a>
+        <a class="btn neon-btn" href="{% url 'rectas_info' %}">Información sobre las rectas</a>
+        <a class="btn neon-btn" href="{% url 'rectas' %}">Calcular rectas</a>
+    </div>
+</div>
+
+</body>
+</html>

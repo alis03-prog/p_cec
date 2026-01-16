@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información sobre Áreas</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'areas/styles.css' %}">
+</head>
+
+<body class="ion-bg">
+
+<div class="scanlines"></div>
+<div class="ion-grid"></div>
+
+<div class="contenedor panel">
+
+    <h1 class="titulo glow">Guía para Calcular Áreas</h1>
+
+    <p class="intro">
+        El área es la medida de la superficie que ocupa una figura.
+        A continuación encontrarás explicaciones claras y sencillas para calcular el área de un
+        <strong>cuadrado</strong>, <strong>rectángulo</strong> y <strong>triángulo</strong>.
+    </p>
+
+    <!-- CUADRADO -->
+    <div class="figura">
+        <h2>Área del Cuadrado</h2>
+        <p>
+            Un cuadrado tiene <strong>cuatro lados iguales</strong>.  
+            Para calcular su área solo necesitas conocer la medida de un lado.
+        </p>
+        <div class="formula">
+            Fórmula: Área = lado × lado
+        </div>
+        <p>
+            Ejemplo: Si un lado mide 5 cm → <strong>25 cm²</strong>
+        </p>
+    </div>
+
+    <!-- RECTÁNGULO -->
+    <div class="figura">
+        <h2>Área del Rectángulo</h2>
+        <p>
+            Un rectángulo tiene una <strong>base</strong> y una <strong>altura</strong>.
+        </p>
+        <div class="formula">
+            Fórmula: Área = base × altura
+        </div>
+        <p>
+            Ejemplo: 4 × 7 = <strong>28 cm²</strong>
+        </p>
+    </div>
+
+    <!-- TRIÁNGULO -->
+    <div class="figura">
+        <h2>Área del Triángulo</h2>
+        <p>
+            Se necesita la <strong>base</strong> y la <strong>altura</strong>.
+        </p>
+        <div class="formula">
+            Fórmula: Área = (base × altura) / 2
+        </div>
+        <p>
+            Ejemplo: (8 × 6) / 2 = <strong>24 cm²</strong>
+        </p>
+    </div>
+
+    <a class="btn ion-btn" href="{% url 'areas_index' %}">Volver al inicio</a>
+</div>
+
+<div class="img-row">
+    <a href="https://es.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter"><img src="https://media.istockphoto.com/id/2154689643/es/vector/imagen-dibujada-a-mano-de-cuadro-rect%C3%A1ngulo-tri%C3%A1ngulo-c%C3%ADrculo-elipse-y-trapecio-con-f%C3%B3rmulas.jpg?s=612x612&w=0&k=20&c=W5hbr5xpl9jN0_6wE50uJgnQxiLoYCzDIu5FDtlqJBU=" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=TZDgCnfDrIE"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2WBdKCHblJNhK_fCIDUcnjwWblT7h7MMk3A&s"></a>
+    <a href="https://www.superprof.es/diccionario/matematicas/geometria/areas.html"><img src="https://e7.pngegg.com/pngimages/45/264/png-clipart-pie-chart-drawing-artwork-cartoon-creative-pie-chart-infographic-cartoon-character.png" width="70"></a>
+    <a href="https://www.smartick.es/blog/matematicas/geometria/como-calcular-el-area/"><img src="https://www.shutterstock.com/image-illustration/cube-prism-colorful-pastel-chalks-260nw-1755015368.jpg" width="70"></a>
+</div>
+
+</body>
+</html>

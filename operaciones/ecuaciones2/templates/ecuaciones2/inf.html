@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información — Ecuaciones de Segundo Grado</title>
+    <link rel="stylesheet" href="{% static 'ecuaciones2/styles.css' %}">
+</head>
+
+<body class="bg-orange">
+
+    <!-- EFECTOS -->
+    <div class="scanlines"></div>
+    <div class="neon-grid"></div>
+
+    <!-- CONTENEDOR -->
+    <div class="container panel">
+
+        <h1 class="title">Ecuaciones de Segundo Grado</h1>
+
+        <p>
+            Una ecuación de segundo grado (o ecuación cuadrática) es una expresión matemática
+            donde la variable aparece elevada al cuadrado. Su forma general es:
+        </p>
+
+        <p class="formula">ax² + bx + c = 0</p>
+
+        <p>
+            Donde:
+            <br>• <strong>a</strong>, <strong>b</strong> y <strong>c</strong> son números reales.
+            <br>• <strong>a ≠ 0</strong>
+        </p>
+
+        <h2 class="subtitle">Fórmula general</h2>
+
+        <p class="formula">
+            x = (-b ± √(b² − 4ac)) / 2a
+        </p>
+
+        <h2 class="subtitle">Pasos para resolver</h2>
+
+        <ol>
+            <li><strong>Identificar a, b y c.</strong></li>
+            <li><strong>Calcular el discriminante:</strong>
+                <ul>
+                    <li>Δ > 0 → Dos soluciones reales</li>
+                    <li>Δ = 0 → Una solución real</li>
+                    <li>Δ < 0 → Soluciones complejas</li>
+                </ul>
+            </li>
+            <li><strong>Aplicar la fórmula general.</strong></li>
+            <li><strong>Obtener x₁ y x₂.</strong></li>
+        </ol>
+
+        <h2 class="subtitle">Ejemplo</h2>
+
+        <p class="formula">2x² + 3x - 5 = 0</p>
+
+        <p><strong>Discriminante:</strong></p>
+        <p class="formula">Δ = 49</p>
+
+        <p><strong>Soluciones:</strong></p>
+        <p class="formula">
+            x₁ = 1<br>
+            x₂ = -2.5
+        </p>
+
+        <!-- BOTONES -->
+        <a href="{% url 'ecuaciones2' %}" class="btn neon-btn">
+            Resolver ecuación
+        </a>
+
+        <a href="{% url 'ecuaciones2_index' %}" class="btn neon-btn regresar">
+            Volver al inicio
+        </a>
+
+    </div>
+
+    <!-- IMÁGENES -->
+    <div class="img-row">
+    <a href="https://www.youtube.com/watch?v=ZC67c5ar9mA"><img src="https://i.ytimg.com/vi/ZC67c5ar9mA/maxresdefault.jpg" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=oXm9s1iFSpw"><img src="https://nemdigitalstorage.blob.core.windows.net/nem-main/images/2023/01/02/cbb3a921-0de8-4ce2-bb2e-8b72b4681204.png" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=Iv2yGJ0pu8E"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_fqzkGqFlnwPNCYxEPkUwD5KErWMK-vk_XQ&s" width="70"></a>
+    <a href="https://www.superprof.es/apuntes/escolar/matematicas/algebra/ecuaciones/ejercicios-ecuaciones-de-segundo-grado.html"><img src="https://yosoytuprofe.20minutos.es/wp-content/uploads/2020/12/ecuaciones-de-segundo-grado-todo.png" width="70"></a>
+    </div>
+
+</body>
+</html>

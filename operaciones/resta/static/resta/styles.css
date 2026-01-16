@@ -1,0 +1,102 @@
+/* === FONDO FUTURISTA === */
+.bg-future {
+    background: linear-gradient(135deg, #0a0f2c, #001133, #12003b);
+    background-size: 300% 300%;
+    animation: bgAnimation 12s infinite alternate;
+    font-family: "Orbitron", sans-serif;
+    color: #d6d6ff;
+    padding: 40px 10px;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: left top; }
+    100% { background-position: right bottom; }
+}
+
+/* === TARJETA PRINCIPAL === */
+.card-future {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background: rgba(15, 15, 35, 0.6);
+    border: 2px solid #4d7cff;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #4d7cff80;
+    backdrop-filter: blur(10px);
+}
+
+/* === TITULOS === */
+.title-future {
+    text-align: center;
+    color: #7d9cff;
+    text-shadow: 0 0 12px #3a5bff, 0 0 25px #6f8aff;
+    font-size: 38px;
+}
+
+.section-title {
+    color: #8ab4ff;
+    text-shadow: 0 0 10px #5679ff;
+    border-left: 4px solid #6d8eff;
+    padding-left: 10px;
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+/* === CAJAS DE EJEMPLOS === */
+.box {
+    background: rgba(45, 50, 80, 0.6);
+    border: 1px solid #7d9cff;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #5a7cff;
+    font-size: 20px;
+}
+
+.result {
+    background: rgba(80, 255, 140, 0.2);
+    border-color: #27ff70;
+    box-shadow: 0 0 15px #27ff70;
+}
+
+/* === BOTÓN FUTURISTA === */
+.btn-future {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 25px;
+    background: transparent;
+    border: 2px solid #6d8eff;
+    border-radius: 12px;
+    color: #d3d9ff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 0 12px #6d8eff69;
+}
+
+.btn-future:hover {
+    background: #6d8eff;
+    color: #000;
+    box-shadow: 0 0 20px #8cabff;
+    transform: translateY(-3px);
+}
+
+/* === IMÁGENES === */
+.img-row {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.img-row img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px #5a7cff;
+    transition: 0.3s;
+}
+
+.img-row img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #7d9cff;
+}

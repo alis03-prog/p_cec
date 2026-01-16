@@ -1,0 +1,132 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* FONDO FUTURISTA */
+.bg-future {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #081b35, #010812);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e6faff;
+    overflow: hidden;
+}
+
+/* FONDO ANIMADO SUAVE */
+.animated-bg {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: moveGrid 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes moveGrid {
+    from { background-position: 0 0; }
+    to { background-position: 80px 80px; }
+}
+
+/* TARJETA PRINCIPAL */
+.card-future {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 420px;
+    background: rgba(5, 15, 40, 0.92);
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow:
+        0 0 30px rgba(0, 229, 255, 0.5),
+        inset 0 0 20px rgba(0, 229, 255, 0.25);
+}
+
+/* BORDE NEÓN */
+.neon-border {
+    border: 2px solid #00e5ff;
+}
+
+/* TÍTULO */
+.title-future {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+/* EFECTO GLOW */
+.glow {
+    color: #eaffff;
+    text-shadow:
+        0 0 6px #00e5ff,
+        0 0 18px #00e5ff,
+        0 0 35px #00bcd4;
+}
+
+/* FORMULARIO */
+.form-future {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+/* INPUTS */
+.input-future {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid #00bcd4;
+    background: rgba(0, 0, 0, 0.35);
+    color: #e6ffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-future::placeholder {
+    color: #8adfff;
+}
+
+.neon-input:focus {
+    border-color: #00ffff;
+    box-shadow:
+        0 0 12px rgba(0, 255, 255, 0.8);
+}
+
+/* BOTONES */
+.btn-future {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #00ffff;
+    background: transparent;
+    color: #e6ffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.5),
+        inset 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.neon-btn:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow:
+        0 0 22px rgba(0, 255, 255, 0.9),
+        inset 0 0 14px rgba(0, 255, 255, 0.6);
+}
+
+/* RESULTADO */
+.result-future {
+    margin: 20px 0;
+    font-size: 1.4rem;
+}

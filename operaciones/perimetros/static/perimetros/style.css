@@ -1,0 +1,149 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* FONDO NARANJA PLASMA */
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #ffb347, #1a0b00 70%),
+        radial-gradient(circle at bottom, #ff6a00, transparent 65%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffe6cc;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    width: 95%;
+    max-width: 480px;
+    padding: 35px;
+    border-radius: 28px;
+    background: rgba(30, 12, 0, 0.95);
+    border: 2px solid #ff7a00;
+    box-shadow:
+        0 0 45px rgba(255,122,0,0.9),
+        inset 0 0 30px rgba(255,122,0,0.6);
+    animation: plasmaGlow 4s infinite alternate;
+}
+
+/* ANIMACIÓN PLASMA */
+@keyframes plasmaGlow {
+    from {
+        box-shadow:
+            0 0 35px rgba(255,122,0,0.7),
+            inset 0 0 20px rgba(255,122,0,0.4);
+    }
+    to {
+        box-shadow:
+            0 0 65px rgba(255,160,40,1),
+            inset 0 0 35px rgba(255,160,40,0.9);
+    }
+}
+
+/* TÍTULO */
+.titulo-futurista {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #ffd3a1;
+    text-shadow: 0 0 25px #ff7a00;
+}
+
+/* FORMULARIO */
+.form-futurista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* LABELS */
+.label-futurista {
+    font-size: 0.95rem;
+    color: #ffb347;
+    text-shadow: 0 0 8px #ff7a00;
+}
+
+/* INPUTS Y SELECT */
+.input-futurista {
+    padding: 12px;
+    border-radius: 14px;
+    border: 2px solid #ff7a00;
+    background: rgba(255, 140, 0, 0.08);
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: inset 0 0 10px rgba(255,122,0,0.4);
+}
+
+.input-futurista:focus {
+    box-shadow:
+        0 0 20px rgba(255,160,40,1),
+        inset 0 0 15px rgba(255,160,40,0.9);
+}
+
+/* GRUPOS */
+.grupo {
+    display: none;
+    margin-top: 10px;
+}
+
+/* BOTÓN */
+.btn-futurista {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 18px;
+    border: 2px solid #ff7a00;
+    background: transparent;
+    color: #fff3e6;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow:
+        0 0 20px rgba(255,122,0,0.8),
+        inset 0 0 14px rgba(255,122,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-futurista:hover {
+    background: rgba(255,122,0,0.25);
+    transform: scale(1.08);
+    box-shadow:
+        0 0 45px rgba(255,160,40,1),
+        inset 0 0 25px rgba(255,160,40,0.9);
+}
+
+/* RESULTADO */
+.resultado-futurista {
+    margin-top: 25px;
+    padding: 16px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 1.05rem;
+    background: rgba(255,140,0,0.12);
+    border: 1px solid #ff7a00;
+    box-shadow: 0 0 25px rgba(255,122,0,0.7);
+}
+
+/* LINK VOLVER */
+.volver-link {
+    margin-top: 25px;
+    text-decoration: none;
+    color: #ffb347;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px #ff7a00;
+    transition: all 0.3s ease;
+}
+
+.volver-link:hover {
+    color: #fff;
+    text-shadow: 0 0 25px #ffae42;
+}

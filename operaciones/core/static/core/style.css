@@ -1,0 +1,133 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* FONDO */
+.futuristic-body {
+    background: radial-gradient(circle at top, #050b1a, #000);
+    min-height: 100vh;
+    color: #00f7ff;
+    overflow-x: hidden;
+}
+
+/* EFECTOS */
+.scanlines {
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.02) 0px,
+        rgba(255,255,255,0.02) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
+
+.neon-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+/* PANEL MÚSICA */
+.music-panel {
+    position: fixed;
+    top: 30%;
+    left: 20px;
+    width: 160px;
+    padding: 15px;
+    border: 1px solid #00f7ff;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 25px #00f7ff;
+    text-align: center;
+}
+
+.music-panel h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.music-btn {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #00f7ff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.music-btn:hover {
+    box-shadow: 0 0 15px #00f7ff;
+}
+
+.music-text {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+/* CONTENEDOR */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* TÍTULOS */
+.title {
+    font-size: 48px;
+    text-shadow: 0 0 20px #00f7ff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 50px;
+}
+
+/* SECCIONES */
+.menu-section {
+    margin-bottom: 50px;
+}
+
+.menu-section h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+/* GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* BOTONES */
+.neon-button {
+    padding: 16px;
+    border: 2px solid #00f7ff;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #00f7ff;
+    background: rgba(0,0,0,0.6);
+    transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #00f7ff;
+    background: rgba(0,255,255,0.15);
+}

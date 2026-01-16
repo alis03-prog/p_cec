@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información sobre la División</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'division/styles.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="futuristic-title">Información sobre la División</h1>
+
+        <h2>¿Qué es la división?</h2>
+        <p>
+            La <strong>división</strong> es una operación matemática que consiste en repartir o separar una cantidad en partes iguales.
+            También puede entenderse como la operación inversa de la multiplicación.
+        </p>
+
+        <div class="example">
+            <strong>Ejemplo:</strong><br>
+            12 ÷ 3 = 4 <br>
+            (porque 12 repartido en 3 partes iguales da 4)
+        </div>
+
+        <h2>Instrucciones para dividir</h2>
+        <ol>
+            <li>Coloca el dividendo (el número que se va a dividir) dentro de la casita de división.</li>
+            <li>Coloca el divisor (el número que divide) fuera de la casita.</li>
+            <li>Divide cifra por cifra empezando por la izquierda.</li>
+            <li>Multiplica el resultado parcial por el divisor.</li>
+            <li>Resta ese valor al número que vas bajando.</li>
+            <li>Baja la siguiente cifra del dividendo.</li>
+            <li>Repite el proceso hasta terminar todas las cifras.</li>
+        </ol>
+
+        <h2>Ejemplos</h2>
+
+        <h3>División simple</h3>
+        <div class="example">20 ÷ 4 = <strong>5</strong></div>
+
+        <h3>División larga</h3>
+        <div class="example">
+            96 ÷ 3<br><br>
+            3 ) 96<br>
+            &nbsp;&nbsp;&nbsp; - 9<br>
+            &nbsp;&nbsp;&nbsp; -----<br>
+            &nbsp;&nbsp;&nbsp; &nbsp;6<br>
+            &nbsp;&nbsp;&nbsp; - 6<br>
+            &nbsp;&nbsp;&nbsp; -----<br>
+            &nbsp;&nbsp;&nbsp; &nbsp;0<br><br>
+            <strong>Resultado: 32</strong>
+        </div>
+
+        <h2>Dato curioso</h2>
+        <p>
+            La división aparece en situaciones donde se reparte, se distribuye o se fracciona algo. 
+            También se usa para calcular promedios y fracciones en la vida cotidiana.
+        </p>
+    </div>
+      <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+    <a href="https://www.youtube.com/watch?v=mQ4wKV9_pZs"><img src="https://s1.significados.com/foto/ejemplos-divisiones-c2.jpg?class=article" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=wOIoZuo4mJM"><img src="https://aula5e.wordpress.com/wp-content/uploads/2011/10/divi2.jpg?w=584&h=584" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=iKWEY4OVQ6g"><img src="https://www.epsilones.com/material/signos/026-division.jpg" width="70"></a>
+    <a href="https://es.khanacademy.org/math/arithmetic-home/multiply-divide/division-intro/a/intro-division"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Divide20by4.svg" width="70"></a>
+  </div>
+    <a href="{% url 'division_index' %}">Pagina_inicial</a>
+</body>
+</html>

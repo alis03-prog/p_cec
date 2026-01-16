@@ -1,0 +1,126 @@
+/* Fondo futurista ion amarillo */
+body.ion-bg {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #1a1a00 0%, #000 70%);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Scanlines */
+.scanlines {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,0,0.04) 0px,
+        rgba(255,255,0,0.04) 1px,
+        transparent 2px
+    );
+    z-index: 2;
+}
+
+/* Cuadrícula ion */
+.ion-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,0,0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,0,0.12) 1px, transparent 1px);
+    background-size: 45px 45px;
+    z-index: 1;
+}
+
+/* Contenedor */
+.container {
+    position: relative;
+    z-index: 3;
+    padding: 35px;
+    margin: 90px auto;
+    width: 70%;
+    max-width: 760px;
+    background: rgba(30, 30, 5, 0.85);
+    border: 2px solid #ffe600;
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(255,230,0,0.6);
+    text-align: center;
+}
+
+/* Animación */
+.panel {
+    animation: fadeIn 1.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título ion */
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.glow {
+    color: #fff7b0;
+    text-shadow:
+        0 0 5px #ffe600,
+        0 0 12px #ffe600,
+        0 0 25px #ffd000,
+        0 0 45px #ffea00;
+}
+
+/* Texto */
+.descripcion {
+    margin-top: 22px;
+    font-size: 18px;
+    color: #fff3a0;
+}
+
+.lista {
+    margin: 25px auto;
+    width: 60%;
+    text-align: left;
+    color: #fff7c2;
+    font-size: 18px;
+}
+
+/* Botones ion */
+.botones {
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.ion-btn {
+    background: linear-gradient(135deg, #ffe600, #ffb700);
+    color: black;
+    box-shadow:
+        0 0 10px #ffe600,
+        0 0 22px #ffcc00;
+}
+
+.ion-btn:hover {
+    transform: scale(1.08);
+    box-shadow:
+        0 0 18px #fff200,
+        0 0 35px #ffd000;
+}

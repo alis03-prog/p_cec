@@ -1,0 +1,116 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* FONDO FUTURISTA VERDE ÁCIDO */
+.bg-future {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #00ff9c, #021a10 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eafff6;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    width: 90%;
+    max-width: 720px;
+    padding: 40px;
+    background: rgba(0, 25, 15, 0.92);
+    border-radius: 24px;
+    border: 2px solid #00ff9c;
+    box-shadow:
+        0 0 40px rgba(0, 255, 160, 0.9),
+        inset 0 0 25px rgba(0, 255, 160, 0.4);
+}
+
+/* TÍTULO */
+.title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 12px #00ff9c,
+        0 0 35px #00ff9c;
+}
+
+/* SUBTÍTULOS */
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #b6ffe3;
+    text-shadow: 0 0 8px rgba(0, 255, 160, 0.6);
+}
+
+/* TEXTO */
+p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #d9fff1;
+    margin-bottom: 15px;
+}
+
+/* LISTAS */
+ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin: 8px 0;
+    color: #caffeb;
+}
+
+/* IMÁGENES */
+.img-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.img-row img {
+    border-radius: 10px;
+    border: 2px solid #00ff9c;
+    box-shadow: 0 0 15px rgba(0, 255, 160, 0.7);
+}
+
+/* BOTÓN */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 26px;
+    border-radius: 18px;
+    border: 2px solid #00ff9c;
+    background: transparent;
+    color: #eafff6;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow:
+        0 0 18px rgba(0, 255, 160, 0.7),
+        inset 0 0 14px rgba(0, 255, 160, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(0, 255, 160, 0.25);
+    transform: scale(1.07);
+    box-shadow:
+        0 0 35px rgba(0, 255, 160, 1),
+        inset 0 0 22px rgba(0, 255, 160, 0.9);
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    .title {
+        font-size: 1.8rem;
+    }
+}

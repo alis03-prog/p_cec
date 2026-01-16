@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información: Ecuaciones de Primer Grado</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ecuaciones1/styles.css' %}">
+</head>
+
+<body class="futuristic-bg">
+
+    <div class="scanlines"></div>
+    <div class="neon-grid"></div>
+
+    <div class="container panel">
+
+        <h1 class="title glow">Ecuaciones de Primer Grado</h1>
+        <p class="descripcion">Concepto, pasos y ejemplos explicados de forma sencilla.</p>
+
+        <!-- ¿Qué son? -->
+        <section class="card">
+            <h2>¿Qué es una ecuación de primer grado?</h2>
+            <p>
+                Una ecuación de primer grado es una igualdad matemática donde aparece una variable (generalmente <strong>x</strong>)
+                elevada a la potencia 1. Su estructura general es:
+            </p>
+
+            <p class="formula"><strong>ax + b = c</strong></p>
+
+            <p>
+                Donde:
+                <ul>
+                    <li><strong>a</strong> es el coeficiente de x</li>
+                    <li><strong>b</strong> es un número que se suma o resta</li>
+                    <li><strong>c</strong> es el resultado del otro lado del signo igual</li>
+                </ul>
+            </p>
+        </section>
+
+        <!-- ¿Para qué sirven? -->
+        <section class="card">
+            <h2>¿Para qué sirven?</h2>
+            <ul>
+                <li>Para encontrar valores desconocidos.</li>
+                <li>Para resolver problemas de la vida real (dinero, distancias, tiempo).</li>
+                <li>Para aprender a trabajar con álgebra básica.</li>
+                <li>Como base para ecuaciones más complejas.</li>
+            </ul>
+        </section>
+
+        <!-- Pasos -->
+        <section class="card">
+            <h2>Pasos para resolver una ecuación de primer grado</h2>
+
+            <ol>
+                <li><strong>Quita paréntesis</strong> si los hay.</li>
+                <li><strong>Pasa las x a un solo lado</strong> de la ecuación.</li>
+                <li><strong>Pasa los números</strong> al otro lado cambiando de signo.</li>
+                <li><strong>Simplifica</strong> sumando o restando los términos.</li>
+                <li><strong>Despeja x</strong> dividiendo entre el coeficiente.</li>
+            </ol>
+        </section>
+
+        <!-- Ejemplos -->
+        <section class="card">
+            <h2>Ejemplos</h2>
+
+            <h3>📌 Ejemplo 1</h3>
+            <p><strong>Ecuación:</strong> 2x + 4 = 10</p>
+            <p>Restamos 4 en ambos lados:</p>
+            <p><strong>2x = 6</strong></p>
+            <p>Dividimos entre 2:</p>
+            <p><strong>x = 3</strong></p>
+
+            <hr>
+
+            <h3>📌 Ejemplo 2</h3>
+            <p><strong>Ecuación:</strong> -3x + 9 = 0</p>
+            <p>Restamos 9:</p>
+            <p><strong>-3x = -9</strong></p>
+            <p>Dividimos entre -3:</p>
+            <p><strong>x = 3</strong></p>
+
+            <hr>
+
+            <h3>📌 Ejemplo 3</h3>
+            <p><strong>Ecuación:</strong> x - 8 = 12</p>
+            <p>Sumamos 8:</p>
+            <p><strong>x = 20</strong></p>
+        </section>
+
+        <a href="{% url 'ecuaciones1_index' %}" class="btn neon-btn regresar">Volver al inicio</a>
+
+    </div>
+  <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+    <a href="https://www.youtube.com/watch?v=IHblqjW8RY8"><img src="https://i.ytimg.com/vi/IHblqjW8RY8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAeON39EZyB3a_wdze8xfrqkuEgDg" width="70"></a>
+    <a href="https://www.superprof.es/apuntes/escolar/matematicas/algebra/ecuaciones/ejercicios-de-ecuaciones-de-primer-grado.html"><img src="https://cdn-blog.superprof.com/blog_all/wp-content/uploads/latex/58d8c17768b9ed1dd035b8e3867d2d916d703560.png"></a>
+    <a href="https://www.youtube.com/watch?v=8rT0DZbYGEs"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoYzk1ZfLn5DmqsmDAxbQmpEJNrQMml1RZeM6m4VWJ_aCPDfiyKGmgJAV1SVPbxJgIVC8Nl33PX04jLBqXr1E5CI4UgTGVv2p5mmTaFP7d5VkVDgXm_PdPoOMUlEK6jqUjv0pZuJouy2Sk/s1600/Ecuaciones+de+primer+grado.png" width="70"></a>
+    <a href="https://www.youtube.com/watch?v=3HCTOOQVbu0&list=PLeySRPnY35dGx5FUtAikZ6UUuHQLaI9_E"><img src="https://i.ytimg.com/vi/nkMkBSPgKIU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD44POhpsHxALbMtAgR7bRNKFG3vw" width="70"></a>
+  </div>
+</body>
+</html>

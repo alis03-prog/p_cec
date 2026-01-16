@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerarquía de Operaciones</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="{% static 'jerarquia/style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora — Jerarquía de Operaciones</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            <label for="expresion">Ingresa la expresión:</label>
+            <input type="text" name="expresion" id="expresion" placeholder="Ejemplo: 5 + 2 * 3 - 4 / 2" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if expresion %}
+            <div class="resultado">
+                <p><strong>Expresión:</strong> {{ expresion }}</p> 
+                <p><strong>Resultado:</strong> {{ resultado }}</p>
+            </div>
+        {% endif %}
+
+        <a class="info-btn" href="{% url 'jerarquia_index' %}">Regresar al inicio</a>
+    </div>
+
+</body>
+</html>

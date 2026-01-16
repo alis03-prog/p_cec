@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Información sobre la Resta</title>
+
+  <!-- CSS externo futurista -->
+  <link rel="stylesheet" href="{% static 'resta/styles.css' %}">
+</head>
+
+<body class="bg-future">
+
+  <main class="card-future">
+    <header>
+      <h1 class="title-future">Operación: Resta</h1>
+      <p class="subtitle">Cómo restar paso a paso, con ejemplos y ejercicios prácticos.</p>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">¿Qué es la resta?</h2>
+      <p>
+        La <strong>resta</strong> es una operación aritmética que consiste en quitar o sustraer una cantidad
+        (el <em>substraendo</em>) de otra (el <em>minuendo</em>) para obtener la diferencia o resultado.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Pasos para hacer una resta</h2>
+      <ol class="steps">
+        <li>Escribe los números alineando sus unidades, decenas y centenas.</li>
+        <li>Empieza a restar desde las unidades.</li>
+        <li>Si la cifra superior es mayor o igual, resta normal.</li>
+        <li>Si es menor, pide un <strong>préstamo</strong>.</li>
+        <li>Escribe el resultado de cada columna.</li>
+        <li>Obtendrás la diferencia final.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Ejemplos</h2>
+
+      <div class="example">
+        <strong>Ejemplo 1 — Sin préstamo</strong>
+        <div class="box">74 − 23 = <strong>51</strong></div>
+      </div>
+
+      <div class="example">
+        <strong>Ejemplo 2 — Con préstamo</strong>
+        <div class="box">402 − 157 = ?</div>
+        <p>Proceso explicado paso a paso (préstamo en centenas → decenas → unidades):</p>
+
+        <ul>
+          <li>Unidades: 12 − 7 = 5</li>
+          <li>Decenas: 9 − 5 = 4</li>
+          <li>Centenas: 3 − 1 = 2</li>
+        </ul>
+
+        <div class="box result">Resultado: <strong>245</strong></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Consejos útiles</h2>
+      <ul>
+        <li>Alinea siempre los números.</li>
+        <li>Si hay ceros, distribuye el préstamo columna por columna.</li>
+        <li>Practica con restas simples antes de hacer grandes.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Ejercicios</h2>
+      <ol>
+        <li>86 − 29 = ?</li>
+        <li>1000 − 467 = ?</li>
+        <li>305 − 178 = ?</li>
+      </ol>
+    </section>
+
+    <footer class="footer">
+      <a class="btn-future" href="{% url 'resta_index' %}">Volver al menú principal</a>
+    </footer>
+  </main>
+
+  <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+    <a href="https://www.youtube.com/watch?v=L6NOkLq6kHk"> <img src="https://www.smartick.es/blog/wp-content/uploads/La-resta.jpg" width="100"></a>
+     <a href="https://www.youtube.com/watch?v=BYF0DMRAhjY"><img src="https://static.eduboom.es/eduboom_es/uploads/vidimgs/22082023-Relacionar-la-suma-y-la-resta.jpg" width="100"></a>
+    <a href="https://arbolabc.com/juegos-de-restas"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcuvZXMGc9n6cV3fJeQG0xH0-irG_qE8DzKA&s" width="100"></a>
+     <a href="https://es.khanacademy.org/math/early-math/cc-early-math-add-sub-basics"><img src="https://i.ytimg.com/vi/42vjqtleG9E/maxresdefault.jpg" width="100"></a>
+  </div>
+
+</body>
+</html>

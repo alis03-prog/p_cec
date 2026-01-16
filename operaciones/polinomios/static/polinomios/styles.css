@@ -1,0 +1,166 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* FONDO TURQUESA HOLOGRÁFICO */
+.futuristic-bg {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #00ffe1, #012f33 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: #eafffd;
+}
+
+/* SCANLINES */
+.scanlines {
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 225, 0.05),
+        rgba(0, 255, 225, 0.05) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* GRID HOLOGRÁFICO */
+.neon-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 255, 225, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 225, 0.08) 1px, transparent 1px);
+    background-size: 42px 42px;
+    animation: gridMove 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes gridMove {
+    from { background-position: 0 0; }
+    to { background-position: 42px 42px; }
+}
+
+/* PANEL PRINCIPAL */
+.container.panel {
+    position: relative;
+    z-index: 2;
+    width: 92%;
+    max-width: 900px;
+    padding: 45px;
+    background: rgba(0, 45, 48, 0.92);
+    border-radius: 28px;
+    border: 2px solid #00ffe1;
+    box-shadow:
+        0 0 45px rgba(0, 255, 225, 0.9),
+        inset 0 0 30px rgba(0, 255, 225, 0.45);
+}
+
+/* TÍTULO PRINCIPAL */
+.title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #eafffd;
+}
+
+.glow {
+    text-shadow:
+        0 0 14px #00ffe1,
+        0 0 45px #00ffe1;
+}
+
+/* SUBTÍTULOS */
+.res-title {
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+    color: #b6fff6;
+    text-shadow: 0 0 10px rgba(0, 255, 225, 0.7);
+}
+
+/* TEXTO */
+.descripcion {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #d6fffb;
+}
+
+/* DIVISORES */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00ffe1,
+        transparent
+    );
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    margin: 25px 10px 0;
+    padding: 14px 28px;
+    border-radius: 20px;
+    border: 2px solid #00ffe1;
+    background: transparent;
+    color: #eafffd;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow:
+        0 0 18px rgba(0, 255, 225, 0.7),
+        inset 0 0 14px rgba(0, 255, 225, 0.45);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(0, 255, 225, 0.25);
+    transform: scale(1.07);
+    box-shadow:
+        0 0 38px rgba(0, 255, 225, 1),
+        inset 0 0 24px rgba(0, 255, 225, 0.9);
+}
+
+/* BOTÓN VOLVER */
+.volver {
+    border-color: #7ffcff;
+    box-shadow:
+        0 0 18px rgba(127, 252, 255, 0.8),
+        inset 0 0 14px rgba(127, 252, 255, 0.5);
+}
+
+/* IMÁGENES */
+.img-row {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.img-row img {
+    border-radius: 12px;
+    border: 2px solid #00ffe1;
+    box-shadow: 0 0 18px rgba(0, 255, 225, 0.8);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .container.panel {
+        padding: 30px;
+    }
+}

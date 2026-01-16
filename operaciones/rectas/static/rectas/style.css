@@ -1,0 +1,231 @@
+/* ------------------------------
+   FONDO FUTURISTA
+------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0014;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Grid rosado neón */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: linear-gradient(90deg, rgba(255,0,120,0.15) 1px, transparent 1px),
+                      linear-gradient(0deg, rgba(255,0,120,0.15) 1px, transparent 1px);
+    z-index: -2;
+}
+
+/* Efecto scanline */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 0, 120, 0.05) 0px,
+        rgba(255, 0, 120, 0.05) 2px,
+        rgba(0, 0, 0, 0.06) 3px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ------------------------------
+   TÍTULOS
+------------------------------ */
+
+h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    color: #ff69b4;
+    text-shadow: 0 0 15px #ff1fa4, 0 0 30px #ff008c;
+    animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #ff2fa6; }
+    100% { text-shadow: 0 0 25px #ff2fa6, 0 0 50px #ff008c; }
+}
+
+h2, h3 {
+    color: #ff8bcf;
+}
+
+/* ------------------------------
+   FORMULARIO
+------------------------------ */
+
+form {
+    margin-top: 30px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid #ff2fa6;
+    background: rgba(255, 0, 120, 0.15);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    box-shadow: 0 0 20px #ff2fa6;
+}
+
+button {
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    background: rgba(255, 0, 120, 0.25);
+    border: 2px solid #ff2fa6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff2fa6;
+    box-shadow: 0 0 25px #ff2fa6;
+    transform: scale(1.08);
+}
+
+/* ------------------------------
+   RECTA NUMÉRICA
+------------------------------ */
+
+.recta-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.numero {
+    padding: 10px 15px;
+    margin: 4px;
+    border-bottom: 3px solid #ff61c0;
+    background: rgba(255, 0, 120, 0.1);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* número1 y número2 */
+.marcado {
+    background-color: rgba(255, 255, 0, 0.7);
+    color: black;
+    font-weight: bold;
+}
+
+/* resultado */
+.resultado {
+    background-color: #ff2fa6;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ff2fa6;
+}
+
+/* ------------------------------
+   BOTÓN FUTURISTA DE VOLVER
+------------------------------ */
+
+.btn-future {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 25px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid #ff2fa6;
+    border-radius: 10px;
+    background: rgba(255, 0, 120, 0.2);
+    transition: 0.3s;
+}
+
+.btn-future:hover {
+    background: #ff2fa6;
+    box-shadow: 0 0 30px #ff2fa6;
+    transform: scale(1.1);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+
+@media(max-width: 600px) {
+    .recta-container {
+        flex-wrap: wrap;
+    }
+
+    input[type="number"] {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .btn-future {
+        width: 90%;
+    }
+}
+/* --------------------------------------
+   BORDE NEÓN ANIMADO ROSA
+--------------------------------------- */
+
+.neon-border {
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 0, 120, 0.1);
+    box-shadow: 0 0 20px rgba(255, 0, 150, 0.4);
+    overflow: hidden;
+}
+
+/* Línea externa animada */
+.neon-border::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(
+        45deg,
+        #ff008c,
+        #ff2fa6,
+        #ff69b4,
+        #ff2fa6,
+        #ff008c
+    );
+    background-size: 400%;
+    border-radius: inherit;
+    z-index: -1;
+    animation: neonMove 6s linear infinite;
+    filter: blur(8px);
+    opacity: 0.7;
+}
+
+/* Animación del borde */
+@keyframes neonMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

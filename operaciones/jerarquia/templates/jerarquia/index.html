@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página Principal de Jerarquia de operaciones</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'jerarquia/sty.css' %}">
+</head>
+<body class="futuristic-bg">
+
+<div class="scanlines"></div> <!-- efecto scan -->
+<div class="neon-grid"></div> <!-- líneas del fondo -->
+
+<div class="container panel">
+    <h1 class="title glow">PÁGINA PRINCIPAL DE Jerarquia de operaciones</h1>
+
+    <p class="descripcion">
+        Esta página está hecha con fines educativos para los estudiantes de secundaria.<br>
+        Aquí aprenderás cómo calcular jerarquia de operaciones paso a paso.<br>
+        Opciones disponibles:
+    </p>
+
+    <ol class="lista">
+        <li>Información sobre la jerarquia de operaciones</li>
+        <li>Calcular jerarquia</li>
+    </ol>
+
+    <div class="botones">
+        <a class="btn neon-btn" href="{% url 'index' %}">Volver al Menú</a>
+        <a class="btn neon-btn" href="{% url 'jerarquia_info' %}">Información sobre la jerarquia de operaciones</a>
+        <a class="btn neon-btn" href="{% url 'jerarquia' %}">Calcular Jerarquia</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página Principal de Multiplicacion</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'multiplicacion/sty.css' %}">
+</head>
+<body class="futuristic-bg">
+
+<div class="scanlines"></div> <!-- efecto scan -->
+<div class="neon-grid"></div> <!-- líneas del fondo -->
+
+<div class="container panel">
+    <h1 class="title glow">PÁGINA PRINCIPAL DE Multiplicacion</h1>
+
+    <p class="descripcion">
+        Esta página está hecha con fines educativos para los estudiantes de secundaria.<br>
+        Aquí aprenderás cómo calcular una multiplicacion paso a paso.<br>
+        Opciones disponibles:
+    </p>
+
+    <ol class="lista">
+        <li>Información sobre la multiplicacion</li>
+        <li>Calcular multiplicacion</li>
+    </ol>
+
+    <div class="botones">
+        <a class="btn neon-btn" href="{% url 'index' %}">Volver al Menú</a>
+        <a class="btn neon-btn" href="{% url 'multiplicacion_info' %}">Información sobre la Multiplicacion</a>
+        <a class="btn neon-btn" href="{% url 'multiplicacion' %}">Calcular Multiplicacion</a>
+        <a class="btn neon-btn" href="{% url 'multiplicacion_ejer' %}">Ejercicios Multiplicacion</a>
+    </div>
+</div>
+
+</body>
+</html>

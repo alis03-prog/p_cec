@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal de Áreas</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'areas/sty.css' %}">
+</head>
+
+<body class="ion-bg">
+
+<div class="scanlines"></div>
+<div class="ion-grid"></div>
+
+<div class="container panel">
+    <h1 class="title glow">PÁGINA PRINCIPAL DE ÁREAS</h1>
+
+    <p class="descripcion">
+        Esta página está hecha con fines educativos para los estudiantes de secundaria.<br>
+        Aquí aprenderás cómo calcular áreas paso a paso.<br>
+        Opciones disponibles:
+    </p>
+
+    <ol class="lista">
+        <li>Información sobre las áreas</li>
+        <li>Calcular áreas</li>
+    </ol>
+
+    <div class="botones">
+        <a class="btn ion-btn" href="{% url 'index' %}">Volver al Menú</a>
+        <a class="btn ion-btn" href="{% url 'areas_info' %}">Información sobre las Áreas</a>
+        <a class="btn ion-btn" href="{% url 'areas' %}">Calcular Áreas</a>
+    </div>
+</div>
+
+</body>
+</html>

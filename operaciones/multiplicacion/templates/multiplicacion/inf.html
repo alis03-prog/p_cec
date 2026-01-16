@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información sobre la Multiplicación</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'multiplicacion/styles.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="futuristic-title">Información sobre la Multiplicación</h1>
+
+        <h2>¿Qué es la multiplicación?</h2>
+        <p>
+            La <strong>multiplicación</strong> es una operación matemática que consiste en sumar un número varias veces de forma rápida.  
+            Es decir, multiplicar es una forma abreviada de sumar repetidamente.
+        </p>
+
+        <div class="example">
+            <strong>Ejemplo:</strong><br>
+            3 × 4 = 12  
+            (porque 3 + 3 + 3 + 3 = 12)
+        </div>
+
+        <h2>Instrucciones para multiplicar</h2>
+        <ol>
+            <li>Escribe los números que quieres multiplicar.</li>
+            <li>Multiplica las unidades del segundo número por cada cifra del primero.</li>
+            <li>Si el resultado es mayor que 9, coloca la unidad y lleva la decena.</li>
+            <li>Continúa multiplicando con las decenas, centenas, etc.</li>
+            <li>Si el multiplicador tiene más de una cifra, agrega un cero al pasar a la siguiente fila.</li>
+            <li>Suma los resultados de cada fila.</li>
+            <li>El número final es el producto.</li>
+        </ol>
+
+        <h2>Ejemplos</h2>
+
+        <h3>Multiplicación simple</h3>
+        <div class="example">6 × 3 = <strong>18</strong></div>
+
+        <h3>Multiplicación con llevadas</h3>
+        <div class="example">
+            &nbsp;&nbsp;27<br>
+            ×&nbsp;  4<br>
+            -------<br>
+            <strong>108</strong>
+        </div>
+
+        <h2>Dato curioso</h2>
+        <p>
+            La multiplicación es una de las operaciones básicas de la aritmética y se relaciona directamente con la suma repetida y con áreas y patrones en matemáticas.
+        </p>
+    </div>
+      <!-- IMÁGENES (corregido: "src" en vez de "href") -->
+  <div class="img-row">
+    <a href="https://www.youtube.com/watch?v=shXj-YCWWeM"><img src="https://www.conmishijos.com/uploads/tareas_escolares/tablasmultiplicar.jpg" width="100"></a>
+    <a href="https://www.youtube.com/watch?v=AE4B0hgnz0E"><img src="https://www.educatodo.com.mx/cdn/shop/collections/multiplicaciones-276563_1350x386.jpg?v=1710021248" width="100"></a>
+    <a href="https://www.youtube.com/watch?v=wVJRhd2xypY"><img src="https://www.pequeocio.com/wp-content/uploads/2018/10/multiplicaciones-primaria-550x477.jpg" width="100"></a>
+    <a href="https://www.smartick.es/blog/matematicas/multiplicaciones-y-divisiones/aprender-multiplicaciones/"><img src="https://images.twinkl.co.uk/tw1n/image/private/t_630_eco/image_repo/36/70/es-t-n-017-cuadrado-de-multiplicaciones-poster_ver_2.jpg" width="100"></a>
+  </div>
+    <a href="{% url 'multiplicacion_index' %}">Pagina_inicial</a>
+</body>
+</html>

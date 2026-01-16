@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola soy suma</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'suma/style.css' %}"> 
+</head>
+
+<body class="bg-future">
+
+    <div class="animated-bg"></div>
+
+    <main class="card-future neon-border">
+
+        <h1 class="title-future glow">Addon de Suma</h1>
+
+        <form method="post" class="form-future">
+            {% csrf_token %}
+
+            <input type="number" name="numero1" placeholder="Ingresa el primer número"
+                   class="input-future neon-input" step="0.01" required>
+
+            <input type="number" name="numero2" placeholder="Ingresa el segundo número"
+                   class="input-future neon-input" step="0.01" required>
+
+            <button type="submit" class="btn-future neon-btn">Calcular</button>
+        </form>
+
+        {% if resultado is not None %}
+            <div class="result-future glow">
+                <p><strong>Operación realizada:</strong></p>
+                <p>{{ operacion }}</p>
+
+        
+                <h2 class="result-future">Resultado: {{ resultado }}</h2>
+            </div>
+        {% endif %}
+
+        <a href="{% url 'suma_index' %}" class="btn-future neon-btn">Volver al inicio</a>
+
+    </main>
+
+</body>
+</html>

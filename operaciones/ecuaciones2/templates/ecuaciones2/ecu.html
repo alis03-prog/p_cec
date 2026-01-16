@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resolver Ecuaciones de Segundo Grado</title>
+    <link rel="stylesheet" href="{% static 'ecuaciones2/style.css' %}">
+</head>
+
+<body class="futuristic-bg">
+
+<div class="scanlines"></div>
+<div class="neon-grid"></div>
+
+<div class="container panel">
+
+    <h1 class="title glow">Resolver Ecuaciones de Segundo Grado</h1>
+
+    <p class="descripcion">
+        Ingresa los valores de <strong>a</strong>, <strong>b</strong> y <strong>c</strong> en la ecuación:
+    </p>
+
+    <p class="formula">ax² + bx + c = 0</p>
+
+    <form method="post" class="formulario">
+        {% csrf_token %}
+
+        <label>a</label>
+        <input type="text" name="a" value="{{ a_val }}" required>
+
+        <label>b</label>
+        <input type="text" name="b" value="{{ b_val }}" required>
+
+        <label>c</label>
+        <input type="text" name="c" value="{{ c_val }}" required>
+
+        <button type="submit" class="btn neon-btn">Resolver</button>
+    </form>
+
+    {% if resultado %}
+        <div class="resultado-box">
+            <h2>Resultado</h2>
+            <ul>
+                {% for r in resultado_lista %}
+                    <li>{{ r }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <a href="{% url 'ecuaciones2_index' %}" class="btn neon-btn regresar">
+        Volver al inicio
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal de Suma</title>
+
+    <!-- CSS AZUL NEÓN -->
+    <link rel="stylesheet" href="{% static 'suma/sty.css' %}">
+</head>
+
+<body class="futuristic-bg">
+
+    <!-- EFECTOS VISUALES -->
+    <div class="scanlines"></div>
+    <div class="neon-grid"></div>
+
+    <!-- PANEL PRINCIPAL -->
+    <div class="container panel">
+
+        <h1 class="title glow">PÁGINA PRINCIPAL DE SUMA</h1>
+
+        <p class="descripcion">
+            Esta página está hecha con fines educativos para los estudiantes de secundaria.<br>
+            Aquí aprenderás cómo calcular una suma paso a paso.<br>
+            Opciones disponibles:
+        </p>
+
+        <ol class="lista">
+            <li>Información sobre la suma</li>
+            <li>Calcular suma</li>
+        </ol>
+
+        <div class="botones">
+            <a class="btn neon-btn" href="{% url 'index' %}">
+                Volver al Menú
+            </a>
+
+            <a class="btn neon-btn" href="{% url 'suma_info' %}">
+                Información sobre la Suma
+            </a>
+
+            <a class="btn neon-btn" href="{% url 'suma' %}">
+                Calcular Suma
+            </a>
+            
+            <a class="btn neon-btn" href="{% url 'suma_ejer' %}">
+                Ejercicios Suma
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* Fondo ion futurista */
+body.ion-bg {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: radial-gradient(circle at top, #1a1a00 0%, #000 75%);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Scanlines */
+.scanlines {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,0,0.04) 0,
+        rgba(255,255,0,0.04) 1px,
+        transparent 2px
+    );
+    z-index: 2;
+}
+
+/* Cuadrícula ion */
+.ion-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,0,0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,0,0.12) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Contenedor principal */
+.contenedor {
+    position: relative;
+    z-index: 3;
+    max-width: 780px;
+    margin: auto;
+    padding: 35px;
+    background: rgba(30, 30, 5, 0.88);
+    border: 2px solid #ffe600;
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(255,230,0,0.6);
+}
+
+/* Animación */
+.panel {
+    animation: aparecer 1.2s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos */
+.titulo {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.glow {
+    color: #fff7b0;
+    text-shadow:
+        0 0 6px #ffe600,
+        0 0 15px #ffe600,
+        0 0 30px #ffd000;
+}
+
+h2 {
+    color: #ffeb80;
+    margin-top: 0;
+}
+
+/* Texto */
+.intro {
+    font-size: 18px;
+    color: #fff3a0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Tarjetas */
+.figura {
+    margin-top: 28px;
+    padding: 20px;
+    background: rgba(255,255,0,0.05);
+    border-left: 5px solid #ffe600;
+    border-radius: 10px;
+}
+
+/* Fórmulas */
+.formula {
+    margin-top: 10px;
+    padding: 12px;
+    background: rgba(255,255,0,0.12);
+    border-left: 5px solid #ffea00;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* Botón */
+.btn {
+    display: block;
+    margin: 35px auto 0;
+    width: 220px;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 14px;
+}
+
+.ion-btn {
+    background: linear-gradient(135deg, #ffe600, #ffb700);
+    color: black;
+    box-shadow: 0 0 12px #ffe600, 0 0 25px #ffcc00;
+}
+
+.ion-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #fff200, 0 0 40px #ffd000;
+}
+
+/* Imágenes */
+.img-row {
+    margin-top: 35px;
+    text-align: center;
+    z-index: 3;
+    position: relative;
+}
+
+.img-row img {
+    width: 70px;
+    margin: 10px;
+    filter: drop-shadow(0 0 8px #ffe600);
+}

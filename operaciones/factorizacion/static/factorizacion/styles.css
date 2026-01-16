@@ -1,0 +1,155 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* FONDO FUTURISTA MAGENTA LÁSER */
+.bg-future {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #4a0026, #0a0005);
+    color: #ffe6f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+}
+
+/* TARJETA PRINCIPAL */
+.card-future {
+    width: 90%;
+    max-width: 900px;
+    background: rgba(40, 0, 25, 0.92);
+    border: 2px solid #ff00c8;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow:
+        0 0 35px rgba(255, 0, 200, 0.8),
+        inset 0 0 20px rgba(255, 0, 200, 0.35);
+}
+
+/* TÍTULOS */
+.title-future {
+    text-align: center;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #fff0fa;
+    text-shadow:
+        0 0 8px #ff00c8,
+        0 0 25px #ff00c8;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #ffc2e8;
+    font-size: 1.05rem;
+}
+
+/* SECCIONES */
+.section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #ff66da;
+    text-shadow: 0 0 10px rgba(255, 0, 200, 0.7);
+}
+
+/* TEXTO */
+p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #ffd6ef;
+}
+
+strong {
+    color: #ff99e6;
+}
+
+/* LISTAS */
+ol, ul {
+    margin-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #ffb3e3;
+}
+
+/* PASOS */
+.steps li {
+    padding-left: 5px;
+}
+
+/* EJEMPLOS */
+.example {
+    margin-top: 20px;
+}
+
+.example strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff66da;
+}
+
+/* CAJA DE EJEMPLOS */
+.box {
+    background: rgba(60, 0, 35, 0.85);
+    border-left: 4px solid #ff00c8;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    color: #ffe6f5;
+    box-shadow: inset 0 0 12px rgba(255, 0, 200, 0.4);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* BOTÓN FUTURISTA */
+.btn-future {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 14px;
+    border: 2px solid #ff00c8;
+    background: transparent;
+    color: #fff0fa;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow:
+        0 0 16px rgba(255, 0, 200, 0.7),
+        inset 0 0 10px rgba(255, 0, 200, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-future:hover {
+    background: rgba(255, 0, 200, 0.25);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow:
+        0 0 30px rgba(255, 0, 200, 1),
+        inset 0 0 18px rgba(255, 0, 200, 0.8);
+}
+
+/* IMÁGENES DECORATIVAS */
+.img-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.img-row img {
+    border-radius: 50%;
+    border: 2px solid #ff00c8;
+    box-shadow: 0 0 15px rgba(255, 0, 200, 0.8);
+}
